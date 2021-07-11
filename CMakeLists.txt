@@ -51,6 +51,7 @@ add_library(STB_IMAGE "thirdparty/stb_image.cpp")
 # GLAD
 add_library(GLAD "thirdparty/glad.c")
 
+
 # Put all libraries into a variable
 set(LIBS glfw GL assimp STB_IMAGE GLAD)
 
