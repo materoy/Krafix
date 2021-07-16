@@ -1,4 +1,12 @@
-#pragma once
+//
+//  camera.h
+//  Grafiq
+//
+//  Created by gZ on 09/07/2021.
+//
+
+#ifndef camera_h
+#define camera_h
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -146,3 +154,5 @@ private:
         Up = glm::normalize(glm::cross(Right, Front));
     }
 };
+
+#endif /* camera_h */

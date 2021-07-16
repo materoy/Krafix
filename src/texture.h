@@ -1,4 +1,6 @@
-#pragma once
 
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#ifndef texture_h
+#define texture_h
+
+unsigned int loadTexture(std::string filePath, unsigned int textureUnit);
+#endif /* texture_h */
