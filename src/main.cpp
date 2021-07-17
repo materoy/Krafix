@@ -80,8 +80,8 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader lightingShader("res/shaders/vertex.glsl", "res/shaders/fragment.glsl");
-    Shader lightCubeShader("res/shaders/vertex.glsl", "res/shaders/light.glsl");
+    Shader lightingShader("../res/shaders/vertex.vert", "../res/shaders/fragment.frag");
+    Shader lightCubeShader("../res/shaders/vertex.vert", "../res/shaders/light.frag");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -159,8 +159,8 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, STRIDE * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     
-    unsigned int diffuseMap = loadTexture("res/models/container2.png", 0);
-    unsigned int specularMap = loadTexture("res/models/container2_specular.png", 1);
+    unsigned int diffuseMap = loadTexture("../res/models/container2.png", 0);
+    unsigned int specularMap = loadTexture("../res/models/container2_specular.png", 1);
 
 
     // render loop

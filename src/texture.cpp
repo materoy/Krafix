@@ -1,14 +1,18 @@
 #include <string>
+#include <string.h>
 #include "texture.h"
 #include <iostream>
 #include "glad/glad.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+#include "helpers/RootDir.h"
 
 unsigned int loadTexture(std::string filePath, unsigned int textureUnit)
 {
     int width, height, nrChannels;
-    unsigned char* data = stbi_load(filePath.c_str(), &width, &height, &nrChannels, 0);
+    const char* strFilePath = const_cast<char*>(filePath.c_str());
+    unsigned char* data = stbi_load(
+                strcpy((char *) ((std::string) ROOT_DIR).c_str(), strFilePath), &width, &height, &nrChannels, 0);
     if (data)
     {
         unsigned int texture;

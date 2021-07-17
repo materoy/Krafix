@@ -56,6 +56,8 @@ public:
         }
         catch (std::ifstream::failure e )
         {
+            std::cout << strcpy((char *) ((std::string) ROOT_DIR).c_str(), vertexPath) << std::endl;
+            std::cout << strcpy((char *) ((std::string) ROOT_DIR).c_str(), fragmentPath) << std::endl;
             std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
         }
         
