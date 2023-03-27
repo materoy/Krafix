@@ -2,9 +2,9 @@ extern crate vulkano;
 extern crate vulkano_win;
 extern crate winit;
 
-use std::{sync::Arc, time::Instant};
+use std::{sync::Arc};
 
-use nalgebra_glm::{look_at, perspective, pi, rotate_normalized_axis, translate, vec3, TMat4};
+use nalgebra_glm::{look_at, perspective, vec3};
 use shaders::vs;
 use vertex::MVP;
 use vulkano::{
@@ -14,7 +14,7 @@ use vulkano::{
     },
     descriptor_set::{PersistentDescriptorSet, WriteDescriptorSet},
     device::{
-        physical::{PhysicalDevice, PhysicalDeviceType},
+        physical::{PhysicalDeviceType},
         Device, DeviceCreateInfo, DeviceExtensions, QueueCreateInfo,
     },
     format::Format,
